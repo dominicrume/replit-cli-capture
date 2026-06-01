@@ -1,0 +1,27 @@
+pipeline:
+  input_dir: input
+  quarantine_dir: quarantine
+  output_dir: output
+  db_name: pipeline.db
+  table_name: records
+  # Cron string: run once per day at 02:00 UTC
+  cron_string: "0 2 * * *"
+
+# Declare every column the pipeline should process.
+# type: "string" or "numeric"
+# nullable: true allows empty values (default: false)
+# primary_key: true uses this column for idempotent deduplication
+columns:
+  - name: id
+    type: string
+    nullable: false
+    primary_key: true
+  - name: category
+    type: string
+    nullable: false
+  - name: amount
+    type: numeric
+    nullable: false
+  - name: description
+    type: string
+    nullable: true

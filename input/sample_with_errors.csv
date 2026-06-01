@@ -1,0 +1,5 @@
+id,category,amount,description
+006,Furniture,299.99,Standing desk
+007,,75.0,Missing category
+008,Tools,not-a-number,Broken amount
+009,Sports,49.95,
